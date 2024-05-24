@@ -1,0 +1,42 @@
+@use "@angular/material" as mat;
+
+// Define custom color palettes
+$base-color: #5ac268;
+$black-color: #101811;
+$grey-color: #9da49e;
+$white-color: #fffffff9;
+
+// Primary palette (using your base color)
+$app-primary: mat.define-palette(mat.$green-palette, 500);
+
+// Optional: Define additional shades for contrast
+// $app-primary-light: mat.define-palette($base-color, 300);
+// $app-primary-dark: mat.define-palette($base-color, 700);
+
+// Choose your accent and warn palettes
+$app-accent: mat.define-palette(mat.$teal-palette, A700); // Teal accent
+$app-warn: mat.define-palette(mat.$red-palette, 500); // Red for warnings
+
+// Define the theme (light theme in this case)
+$app-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $app-primary,
+      accent: $app-accent,
+      warn: $app-warn,
+    ),
+  )
+);
+
+@mixin custom-theme($theme) {
+  @include mat.all-component-themes($theme);
+  // Additional custom styles can be added here
+  // Custom button styles
+  .my-custom-button {
+    background-color: mat.get-color-from-palette($theme, primary);
+    color: mat.get-color-from-palette($theme, primary, contrast);
+    // Add additional custom styles as needed
+  }
+}
+
+// Export the custom-theme mixin

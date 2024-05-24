@@ -1,0 +1,36 @@
+<mat-dialog-content>
+  <ng-container *ngIf="isForm1Visible" class="flexActive row">
+    <h1 (click)="toggleForm()">Login</h1>
+    <app-input [fieldName]="form1Feilds[0]"></app-input>
+    <app-input [fieldName]="form1Feilds[1]"></app-input>
+    <div class="flexActive">
+      <app-button [txt]="btnTxt[0]" (action)="changeVisible()"></app-button>
+      <app-links
+        [siz]="'15px'"
+        [txt]="'Forget Password'"
+        (action)="toggleForm()"
+      ></app-links>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="!isForm1Visible && !isActive" class="flexActive row">
+    <h1 (click)="toggleForm()">Login2</h1>
+    <app-input [fieldName]="form1Feilds[0]"></app-input>
+    <app-input [fieldName]="form1Feilds[1]"></app-input>
+    <app-input [fieldName]="form2Feilds[0]"></app-input>
+    <app-input [fieldName]="form2Feilds[1]"></app-input>
+    <app-button [txt]="btnTxt[1]" (action)="changeActive()"></app-button>
+  </ng-container>
+
+  <ng-container *ngIf="!isForm1Visible && isActive" class="flexActive row">
+    <h1 (click)="toggleForm()">Login3</h1>
+    <app-input [fieldName]="form1Feilds[2]"></app-input>
+    <app-button [txt]="btnTxt[2]" (action)="toggleForm()"></app-button>
+  </ng-container>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="dialogRef.close()">Close</button>
+</mat-dialog-actions>
+
+<div class="banner"></div>

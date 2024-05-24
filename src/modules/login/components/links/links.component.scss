@@ -1,0 +1,19 @@
+@import "../../../../styles.scss";
+
+.flexActive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.links {
+  color: black;
+  gap: 0.6rem;
+  cursor: pointer;
+  span {
+    font-size: 1.2rem;
+  }
+}
+p:hover,
+span:hover {
+  color: $base-color;
+}
