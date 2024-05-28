@@ -1,6 +1,12 @@
-<div class="flexActive links" (click)="openModal()" (click)="onClick()">
+<div
+  class="flexActive links log-link"
+  (click)="openModal()"
+  (click)="onClick()"
+  [ngClass]="{ active: isActive }"
+  [ngStyle]="{ display: isDisplay ? 'flex' : 'none' }"
+>
   <img src="{{ imgLink }}" alt="" width="19px" />
-  <span class="log-link" [ngStyle]="{ 'font-size': siz }">
+  <span [ngStyle]="{ 'font-size': siz }">
     {{ txt }}
   </span>
 </div>

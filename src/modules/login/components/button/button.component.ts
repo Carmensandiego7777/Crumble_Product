@@ -10,6 +10,6 @@ export class ButtonComponent {
   @Output() action = new EventEmitter();
 
   onClick() {
-    this.action.emit();
+    this.action.emit(this.txt);
   }
 }

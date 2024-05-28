@@ -1,14 +1,18 @@
 <mat-dialog-content>
   <ng-container *ngIf="isForm1Visible" class="flexActive row">
     <h1 (click)="toggleForm()">Login</h1>
-    <app-input [fieldName]="form1Feilds[0]"></app-input>
-    <app-input [fieldName]="form1Feilds[1]"></app-input>
+    <app-input [fieldName]="form1Feilds[0]" [isdisabled]="canLogin" (ejectData)="setData($event)"></app-input>
+    <app-input [fieldName]="form1Feilds[1]" *ngIf="canLogin"></app-input>
     <div class="flexActive">
-      <app-button [txt]="btnTxt[0]" (action)="changeVisible()"></app-button>
+      <app-button
+        [txt]="canLogin ? btnTxt[1] : btnTxt[0]"
+        (action)="changeVisible($event)"
+      ></app-button>
       <app-links
         [siz]="'15px'"
         [txt]="'Forget Password'"
-        (action)="toggleForm()"
+        (action)="forgetPassword()"
+        [isDisplay]="canLogin"
       ></app-links>
     </div>
   </ng-container>
@@ -19,18 +23,17 @@
     <app-input [fieldName]="form1Feilds[1]"></app-input>
     <app-input [fieldName]="form2Feilds[0]"></app-input>
     <app-input [fieldName]="form2Feilds[1]"></app-input>
-    <app-button [txt]="btnTxt[1]" (action)="changeActive()"></app-button>
+    <app-button [txt]="btnTxt[2]" (action)="changeActive()"></app-button>
   </ng-container>
 
   <ng-container *ngIf="!isForm1Visible && isActive" class="flexActive row">
     <h1 (click)="toggleForm()">Login3</h1>
     <app-input [fieldName]="form1Feilds[2]"></app-input>
-    <app-button [txt]="btnTxt[2]" (action)="toggleForm()"></app-button>
+    <app-button [txt]="btnTxt[3]" (action)="toggleForm()"></app-button>
   </ng-container>
+  <div class="banner"></div>
 </mat-dialog-content>
 
 <mat-dialog-actions>
   <button mat-button (click)="dialogRef.close()">Close</button>
 </mat-dialog-actions>
-
-<div class="banner"></div>

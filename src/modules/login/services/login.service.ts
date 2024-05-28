@@ -19,6 +19,10 @@ export class LoginService {
     return this.http.post(`${this.apiUrl}/user/login`, { ...user });
   }
 
+  loginWithOtp(email:string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/user/login/otp`, { email });
+
+  }
   verifyAccount(token: otpData): Observable<any> {
     const newData = {
       email: token.email,

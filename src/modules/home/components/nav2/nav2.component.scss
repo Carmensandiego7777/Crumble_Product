@@ -1,0 +1,16 @@
+@import "../../../../styles.scss";
+
+.navbar2 {
+  top: 0;
+  position: sticky;
+  background-color: $white-color;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  padding: 0.5rem;
+}
+
+@media (min-width: 671px) {
+  .navbar2 {
+    display: none;
+  }
+}

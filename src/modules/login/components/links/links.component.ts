@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PopUpComponent } from '../pop-up/pop-up.component';
-
+import { ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -12,11 +12,14 @@ export class LinksComponent {
   @Input() imgLink: string = '';
   @Input() siz: string = '';
   @Input() txt: string = '';
+  @Input() isDisplay: boolean = true;
 
+  isActive = false;
   @Output() action = new EventEmitter();
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private Routed: ActivatedRoute) {}
   ngOnInit() {
-    this.openModal();
+    // this.openModal();
+    // console.log(this.Routed.url);
   }
 
   openModal() {
@@ -25,8 +28,13 @@ export class LinksComponent {
     }
   }
 
+  onActivate() {
+    this.isActive = true;
+  }
+
   onClick() {
     console.log('links');
+    this.onActivate();
     this.action.emit();
   }
 

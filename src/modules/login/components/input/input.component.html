@@ -1,6 +1,6 @@
 <div style="font-size: 12px">
   <mat-form-field appearance="outline">
     <mat-label>{{ fieldName }}</mat-label>
-    <input matInput placeholder="Enter your {{ fieldName }}" type="text" />
+    <input matInput placeholder="Enter your {{ fieldName }}" type="text" [disabled]="isdisabled" (input)="ejectInput()" [(ngModel)]="fieldData" />
   </mat-form-field>
 </div>

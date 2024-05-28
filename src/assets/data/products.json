@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Hybrid Tomato (Tamatar)",
+    "description": "Hybrid tomatoes are a crossbreed between different tomato varieties, engineered to enhance desirable traits like disease resistance, yield, and flavor.",
+    "price": 20,
+    "image": "https://www.eatrightbasket.com/wp-content/uploads/2019/03/Tomato-hybrid.png",
+    "category": null,
+    "categoryId": 1
+  },
+  {
+    "id": 2,
+    "name": "Coco Cola",
+    "description": "Coca-Cola is a globally recognized carbonated soft drink, known for its distinctive taste and iconic red branding.",
+    "price": 15,
+    "image": "https://www.bigbasket.com/media/uploads/p/xxl/251023_11-coca-cola-soft-drink-original-taste.jpg",
+    "category": null,
+    "categoryId": 3
+  }
+]

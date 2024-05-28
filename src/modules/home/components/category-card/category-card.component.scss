@@ -1,0 +1,23 @@
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: #333;
+  font-weight: 400;
+}
+
+
+@media (max-width: 768px) {
+
+  .card-title {
+    font-size: 1em;
+    margin: 7px 0;
+    color: #333;
+    font-weight: 400;
+  }
+  
+}

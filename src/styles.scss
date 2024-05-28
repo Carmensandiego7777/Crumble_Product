@@ -56,6 +56,22 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: black;
 }
+.flexActive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .log-link {
   text-decoration: none;
@@ -82,5 +98,18 @@ body {
   &:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+}
+
+@media (max-width: 671px) {
+  .log-link {
+    &.active {
+      color: $base-color; // Change color for active state if desired
+
+      &::after {
+        transform: scaleX(1); // Permanently show the underline
+        transform-origin: bottom left; // Keep the underline origin consistent with hover
+      }
+    }
   }
 }

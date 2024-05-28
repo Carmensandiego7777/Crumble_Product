@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Vegetables & Fruits",
+        "image": "https://t3.ftcdn.net/jpg/03/11/87/52/360_F_311875255_d57wDCwlZxdtOEwsnmXLHkV1r29i1R2U.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Dairy & Breakfast",
+        "image": "https://st2.depositphotos.com/1028911/5625/i/450/depositphotos_56257637-stock-photo-3d-milk-carton-box-isolated.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Cool Drinks & Juices",
+        "image": "https://www.bigbasket.com/media/uploads/p/xl/100401160_11-coca-cola-soft-drink-original-taste.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Instant & Frozen Food",
+        "image": "https://www.bigbasket.com/media/uploads/p/xxl/40136266_7-maggi-special-masala-noodles.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Tea & Coffee",
+        "image": "https://www.kindpng.com/picc/m/23-230480_cafe-coffee-clip-art-transprent-png-tea-coffee.png"
+    }
+]
