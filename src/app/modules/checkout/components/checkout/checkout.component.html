@@ -1,0 +1,30 @@
+<app1-navbar />
+<mat-horizontal-stepper #stepper>
+  <mat-step label="Delivery address">
+    <div *ngIf="address; else block2">
+      <p>Delivery Address: {{ address }},{{ address2 }},{{ address3 }}</p>
+    </div>
+    <ng-template #block2><p>Please enter the address</p></ng-template>
+
+    <div *ngIf="address && address2 && address3; else noGlow">
+      <button mat-button (click)="openDialog()">Add Address</button>
+      <br />
+      <button mat-raised-button (click)="matStepper()">Next</button>
+    </div>
+    <ng-template #noGlow>
+      <button mat-raised-button (click)="openDialog()">Add Address</button
+      ><br />
+      <button mat-button (click)="matStepper()">Next</button>
+    </ng-template>
+  </mat-step>
+
+  <mat-step label="Order Details" aria-disabled="true">
+    <app-order />
+    <app-nav3 (proceedToPay)="matStepper()"></app-nav3>
+  </mat-step>
+  <mat-step label="Payment">
+    <app-payment></app-payment>
+    <!-- <button mat-button (click)="matStepper()">PAY</button> -->
+    <app-total></app-total>
+  </mat-step>
+</mat-horizontal-stepper>

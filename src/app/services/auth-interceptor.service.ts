@@ -6,21 +6,33 @@ import {
   HttpInterceptor,
 } from '@angular/common/http';
 import { Observable, BehaviorSubject, mergeMap } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
+
 export class AuthInterceptorService implements HttpInterceptor {
+
+  
+  private excludedRoutes: string[] = [`${environment.apiUrl}/user/login`];
   private tokenSubject: BehaviorSubject<string>;
+  public email: string;
+  public access_token: string;
   constructor() {
     this.tokenSubject = new BehaviorSubject<string>(
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImNiYzFiZjc2LTI3YTYtNGFkYS1hMWFmLTdlMGIxNWQzOGVhZSIsIm5iZiI6MTcxNjgxMzk1NywiZXhwIjoxNzE3NDE4NzU3LCJpYXQiOjE3MTY4MTM5NTcsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxMDYiLCJhdWQiOiJsb2NhbGhvc3QtYXBpIn0.jHEOKIXBI2Ttm19H4ADbICUpOq097W5ocDbpIxOVfew'
+      localStorage.getItem("access_token") ?? ''
     );
+    this.email = localStorage.getItem('email') ?? '';
+    this.access_token = localStorage.getItem('access_token')??"";
   }
 
-  setToken(token: string): void {
+  setToken(): void {
+
+    const token = localStorage.getItem("access_token") || "";
+    console.log("New token set:", token);
     this.tokenSubject.next(token);
-    console.log(token);
+   
   }
 
   getToken(): Observable<string> {
@@ -34,6 +46,12 @@ export class AuthInterceptorService implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
+
+    if (this.isExcludedRoute(request.url)) {
+      return next.handle(request);
+    }
+
+    console.log(request.url);
     return this.getToken().pipe(
       mergeMap((token: string) => {
         const authRequest = request.clone({
@@ -44,5 +62,10 @@ export class AuthInterceptorService implements HttpInterceptor {
         return next.handle(authRequest);
       })
     );
+  }
+
+  private isExcludedRoute(url: string): boolean {
+    // Check if the request URL matches any of the excluded routes
+    return this.excludedRoutes.some(route => url.includes(route));
   }
 }

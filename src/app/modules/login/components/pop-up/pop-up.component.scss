@@ -1,0 +1,17 @@
+h1 {
+  margin-bottom: 2rem;
+}
+
+.flexActive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.row {
+  flex-direction: column;
+}
+.mat-mdc-dialog-content {
+  max-height: 75vh;
+  overflow: auto; /* Ensure content is scrollable if it overflows */
+}

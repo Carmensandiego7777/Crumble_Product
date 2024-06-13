@@ -1,0 +1,14 @@
+.backimg{
+    background-image: url('../../../../assets/Crumble.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.responsive-image {
+    /* Make the image responsive */
+    width: 100%;
+    height: auto;
+    /* Optionally, add max-width to prevent the image from exceeding its original size */
+    max-width: 100%; /* Adjust this if needed */
+  }

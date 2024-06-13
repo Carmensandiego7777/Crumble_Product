@@ -1,0 +1,45 @@
+.clr{
+    background-color:#ff5800;
+    color: white;
+}
+
+.total{
+    text-decoration: line-through;
+}
+
+.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: #333;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: #ff5800;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+
+.mat-card-content {
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis for text overflow */
+    white-space: nowrap; /* Prevent wrapping */
+  }

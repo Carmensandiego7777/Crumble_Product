@@ -1,0 +1,34 @@
+<div class="navbar flexAround">
+  <div class="nav__logo flexActive">
+    <img src="{{ imglinks[0] }}" alt="" width="50px" />
+    <p class="nav-brand">{{ title }}</p>
+  </div>
+  <div class="flexActive middle">
+    <app-links [txt]="links[0]" [imgLink]="imglinks[1]"></app-links>
+    <app-links [txt]="links[1]" [imgLink]="imglinks[2]"></app-links>
+    <app-links [txt]="links[2]" [imgLink]="imglinks[3]"></app-links>
+    <app-links [txt]="links[3]" [imgLink]="imglinks[3]"></app-links>
+
+    <!-- <div class="nav-btn" id="nav-btn">
+      <img
+        width="28"
+        height="28"
+        src="{{ imglinks[4] }}"
+        alt="shopping-bag--v1"
+      />
+    </div>
+
+    <div class="nav-ham" id="nav-btn">
+      <img
+        width="28"
+        height="28"
+        src="{{ imglinks[5] }}"
+        alt="shopping-bag--v1"
+      />
+    </div> -->
+
+    <div class="container">
+      <input class="label-check" id="label-check" type="checkbox" />
+    </div>
+  </div>
+</div>

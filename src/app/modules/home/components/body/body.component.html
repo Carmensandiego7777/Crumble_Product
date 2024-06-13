@@ -1,0 +1,13 @@
+<div class="home-container">
+  <div>
+    <h2>Shop By Category</h2>
+    <div class="category-grid flexActive">
+      <div class="category-card" *ngFor="let category of categoryData">
+        <app-category-card [cardData]="category" />
+      </div>
+    </div>
+  </div>
+  <!-- <div>
+    <h2>Best Deal!</h2>
+  </div> -->
+</div>

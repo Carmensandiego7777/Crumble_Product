@@ -1,0 +1,50 @@
+.radio-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    user-select: none;
+  }
+
+  .radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+  }
+
+  .radio-container input:checked ~ .checkmark {
+    background-color: #4f46e5; /* Tailwind's indigo-600 */
+    border-color: #4f46e5;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .radio-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .radio-container .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+  }

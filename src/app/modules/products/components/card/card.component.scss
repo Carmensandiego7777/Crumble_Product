@@ -1,0 +1,93 @@
+cardContainer,
+.popup-content {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cardContainer {
+  width: fit-content;
+  max-width: 320px;
+  transition: transform 0.2s ease;
+  
+
+.img{
+  border-radius: 1rem 2rem 3rem 25rem;
+}
+
+  .name-count {
+    margin: 1rem 0 0 0;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+
+}
+.cardContainer:hover{
+  cursor: pointer;
+}
+
+.cardContainer.clicked{
+  animation: bounce 0.3s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+}
+.one {
+  background-image: url(data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/LS0+CiAgICAgICAgICAgICAgPHN2ZyBpZD0ic3ctanMtYmxvYi1zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSI+CiAgICAgICAgICAgICAgICAgICAgPGRlZnM+IAogICAgICAgICAgICAgICAgICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9InN3LWdyYWRpZW50IiB4MT0iMCIgeDI9IjEiIHkxPSIxIiB5Mj0iMCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3RvcCBpZD0ic3RvcDEiIHN0b3AtY29sb3I9InJnYmEoMjQ4LCAxMTcsIDU1LCAxKSIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHN0b3AgaWQ9InN0b3AyIiBzdG9wLWNvbG9yPSJyZ2JhKDI1MSwgMTY4LCAzMSwgMSkiIG9mZnNldD0iMTAwJSI+PC9zdG9wPgogICAgICAgICAgICAgICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICAgICAgICAgIDwvZGVmcz4KICAgICAgICAgICAgICAgIDxwYXRoIGZpbGw9InVybCgjc3ctZ3JhZGllbnQpIiBkPSJNMTAsLTMuMkMxNCwxLjEsMTksNy41LDE3LjUsMTUuN0MxNiwyMy44LDgsMzMuOCwtMC43LDM0LjJDLTkuNCwzNC43LC0xOC45LDI1LjUsLTI2LDE0LjFDLTMzLjEsMi43LC0zNy45LC0xMSwtMzMuMiwtMTUuOEMtMjguNSwtMjAuNSwtMTQuMiwtMTYuNCwtNS42LC0xMy4yQzMsLTkuOSw2LC03LjYsMTAsLTMuMloiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwIDUwKSIgc3Ryb2tlLXdpZHRoPSIwIiBzdHlsZT0idHJhbnNpdGlvbjogYWxsIDAuM3MgZWFzZSAwczsiPjwvcGF0aD4KICAgICAgICAgICAgICA8L3N2Zz4=)
+}
+
+.body{
+  background-color: #255255 ;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper{
+  display: flex;
+
+}
+
+.item{
+  width: 33.3%;
+}
+
+.img{
+  border-radius: 1rem 2rem 3rem 25rem;
+}
+
+
+.custom-dialog-container {
+  background-color: rgba(255, 255, 255, 1); /* Semi-transparent white background */
+  padding: 20px; /* Padding inside the dialog */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for depth */
+}
+
+.example-card{
+  border-radius: 20px;
+} 
+
+.example-card {
+  width: 220px; /* Adjust the width as needed */
+  height: 350px; /* Adjust the height as needed */
+  margin: 10px; /* Add margin between cards */
+}
+
+.mat-card-image img {
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}

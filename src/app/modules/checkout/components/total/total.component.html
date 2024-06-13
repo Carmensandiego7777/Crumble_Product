@@ -1,0 +1,16 @@
+<div class="card align">
+  <div class="card-body">
+    <h5 class="card-title">Total Payable</h5>
+
+    <h2 class="card-text">{{ discountedPrice | currency : "INR" }}</h2>
+    <h3 class="total">{{ totalPrice | currency : "INR" }}</h3>
+    <button
+      type="button"
+      class="btn clr"
+      (click)="onClick()"
+      data-mdb-ripple-init
+    >
+      Proceed
+    </button>
+  </div>
+</div>

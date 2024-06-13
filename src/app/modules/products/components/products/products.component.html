@@ -1,0 +1,43 @@
+<!-- <app1-navbar />
+@defer{
+<div class="product-container">
+  <div *ngFor="let productList of products" class="product-item">
+    <app-card [cardData]="productList"></app-card>
+  </div>
+</div>
+}@placeholder(minimum 3000ms) {
+<app-placeproduct></app-placeproduct>
+} -->
+
+<!-- products.component.html -->
+<app1-navbar></app1-navbar>
+
+@defer {
+
+<div class="product-container">
+  <div *ngFor="let product of products" class="product-item">
+    <app-card [cardData]="product"></app-card>
+  </div>
+</div>
+
+}@placeholder(minimum 2000ms) {
+
+<div class="product-container">
+  <app-placeproduct *ngFor="let i of [1, 2, 3, 4]"></app-placeproduct>
+</div>
+}
+<!-- <div class="product-container">
+  <div *ngIf="products.length > 0; else placeholderTemplate">
+    <div *ngFor="let product of products" class="product-item">
+      <app-card [cardData]="product"></app-card>
+    </div>
+  </div>
+</div>
+
+<ng-template #placeholderTemplate>
+  <div class="product-container">
+    <app-placeproduct *ngFor="let i of placeholderItems"></app-placeproduct>
+  </div>
+</ng-template> -->
+
+<!-- } -->

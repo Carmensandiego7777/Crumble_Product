@@ -1,0 +1,71 @@
+<section style="background-color: #eee">
+  <div class="container py-5">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-8 col-lg-6 col-xl-4">
+        <div class="card" id="chat1" style="border-radius: 15px">
+          <div
+            class="card-header d-flex justify-content-between align-items-center p-3 bg-info text-white border-bottom-0"
+            style="border-top-left-radius: 15px; border-top-right-radius: 15px"
+          >
+            <i class="fas fa-angle-left"></i>
+            <p class="mb-0 fw-bold">Live chat</p>
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="card-body">
+            <div
+              *ngFor="let message of messages; let i = index"
+              [ngClass]="{
+                'd-flex flex-row justify-content-start mb-4':
+                  message.type === 'received',
+                'd-flex flex-row justify-content-end mb-4':
+                  message.type === 'sent'
+              }"
+            >
+              <img
+                *ngIf="message.type === 'received'"
+                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                alt="avatar 1"
+                style="width: 45px; height: 100%"
+              />
+              <div
+                class="p-3"
+                [ngClass]="{
+                  'ms-3': message.type === 'received',
+                  'me-3 border': message.type === 'sent'
+                }"
+                style="
+                  border-radius: 15px;
+                  background-color: rgba(57, 192, 237, 0.2);
+                "
+              >
+                <p class="small mb-0">{{ message.content }}</p>
+              </div>
+              <img
+                *ngIf="message.type === 'sent'"
+                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"
+                alt="avatar 1"
+                style="width: 45px; height: 100%"
+              />
+            </div>
+
+            <div class="form-outline">
+              <textarea
+                class="form-control"
+                [(ngModel)]="newMessage"
+                rows="4"
+                (keydown.enter)="sendMessage()"
+                id="textAreaExample"
+              ></textarea>
+              <label class="form-label" for="textAreaExample">
+                Type your message
+              </label>
+            </div>
+            <button class="btn btn-primary mt-3" (click)="sendMessage()">
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

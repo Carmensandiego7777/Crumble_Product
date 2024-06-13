@@ -1,0 +1,43 @@
+<div class="centered-div">
+  <div *ngIf="!items; else block2">
+    <p>Cart is Empty</p>
+    <button (click)="home()">Go Back</button>
+  </div>
+  <ng-template #block2>
+    <div *ngFor="let item of items">
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              [src]="item.image"
+              alt="Trendy Pants and Shoes"
+              class="img-fluid rounded-start"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.itemName }}</h5>
+              <p class="card-text">{{ item.itemDescription }}</p>
+              <p class="card-text">
+                <small class="text-muted">{{
+                  item.price | currency : "INR"
+                }}</small>
+              </p>
+              <div class="Flex">
+                <div class="counter">
+                  <!-- Display the quantity if available -->
+                  <span class="count">{{ item.quantity || 0 }}</span>
+                </div>
+                <span class="count"
+                  >total: {{ item.quantity * item.price }}</span
+                >
+                <!-- Add to Cart button if needed -->
+                <!-- <button class="cart-style" (click)="addToCart(item)">Add to Cart</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

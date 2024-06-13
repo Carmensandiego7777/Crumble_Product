@@ -1,0 +1,26 @@
+<div class="resize">
+  <mat-dialog-content>
+    <h3>Kindly Enter your address</h3>
+    <p>Flat, House no., Building, Company, Apartment</p>
+    <mat-form-field class="custom-width">
+      <mat-label>Eg: 12/17 Mark Apartments</mat-label>
+      <input matInput [(ngModel)]="data.address" />
+    </mat-form-field>
+    <br />
+    <p>Area, Street, Sector, Village</p>
+    <mat-form-field class="custom-width">
+      <mat-label>Eg: Murugan street, Vadapalani</mat-label>
+      <input matInput [(ngModel)]="data.address2" />
+    </mat-form-field>
+    <br />
+    <p>Town/City</p>
+    <mat-form-field class="custom-width">
+      <mat-label>Eg: Chennai-600621</mat-label>
+      <input matInput [(ngModel)]="data.address3" />
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+  </mat-dialog-actions>
+</div>

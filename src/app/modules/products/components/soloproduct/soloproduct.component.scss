@@ -1,0 +1,73 @@
+
+mat-card{
+  .img{
+    width: 20px ;
+    height: 30px;
+    max-width: fit-content;
+  }
+}
+  
+
+  .counter {
+    display: flex;
+  align-items: center;
+    justify-content: left;
+    gap: .3rem;
+  }
+  
+  .btn {
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff9f00;
+    color: white;
+  }
+  
+  .count {
+    font-size: 18px;
+  }
+  
+  .subtract-btn {
+    border-radius: 50% 0 0 50%;
+  }
+  
+  .add-btn {
+    border-radius: 0 50% 50% 0;
+  }
+  
+
+  .space{
+    width: 30%;
+    justify-content: space-between;
+  }
+
+  $custom-color:#fb641b;
+
+  .design{
+    border-radius: 1rem;
+  }
+
+
+
+  .cart-style{
+    width: 100%;
+    // margin-top: 5px;
+    display: inline-block;
+   
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 12px;
+
+  }
+
+  .Flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+  }

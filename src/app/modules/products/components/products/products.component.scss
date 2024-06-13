@@ -1,0 +1,22 @@
+.resize{
+    width: 60px;
+    display: flex;
+}
+
+.product-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+.product-item {
+    
+    margin: 10px; 
+  }
+
+
+  .img{
+    border-radius: 1rem 2rem 3rem 25rem;
+  }
+  
+  

@@ -37,12 +37,26 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "node_modules/mdb-ui-kit/css/mdb.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/chart.js/dist/chart.js",
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+  "node_modules/bootstrap/dist/js/bootstrap.min.js",
+  "node_modules/mdb-ui-kit/js/mdb.min.js"
+            ]
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -58,6 +72,12 @@
               "outputHashing": "all"
             },
             "development": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.ts"
+                }
+              ],
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
@@ -69,10 +89,14 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "crumble:build:production"
+              "buildTarget": "crumble:build:production",
+              "host": "0.0.0.0",
+              "port": 4200
             },
             "development": {
-              "buildTarget": "crumble:build:development"
+              "buildTarget": "crumble:build:development",
+              "host": "0.0.0.0",
+              "port": 4200
             }
           },
           "defaultConfiguration": "development"
@@ -97,12 +121,22 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "node_modules/mdb-ui-kit/css/mdb.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+  "node_modules/bootstrap/dist/js/bootstrap.min.js",
+  "node_modules/mdb-ui-kit/js/mdb.min.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b61bbb61-7064-4834-9911-dee55262b270"
   }
 }

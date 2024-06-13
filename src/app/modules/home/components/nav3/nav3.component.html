@@ -1,0 +1,14 @@
+<div class="nav3">
+  <div class="insider">
+    <div class="prices">
+      <span class="display-5">Total Payable: </span>
+      <span class="discounted-price">{{
+        discountedPrice | currency : "INR"
+      }}</span>
+      <span class="total-price">{{ totalPrice | currency : "INR" }}</span>
+    </div>
+    <button class="proceed-button btn clr" (click)="proceedToPayClicked()">
+      Proceed to Pay
+    </button>
+  </div>
+</div>

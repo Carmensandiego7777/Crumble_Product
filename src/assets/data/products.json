@@ -6,7 +6,8 @@
     "price": 20,
     "image": "https://www.eatrightbasket.com/wp-content/uploads/2019/03/Tomato-hybrid.png",
     "category": null,
-    "categoryId": 1
+    "categoryId": 1,
+    "solo":1
   },
   {
     "id": 2,
@@ -15,6 +16,7 @@
     "price": 15,
     "image": "https://www.bigbasket.com/media/uploads/p/xxl/251023_11-coca-cola-soft-drink-original-taste.jpg",
     "category": null,
-    "categoryId": 3
+    "categoryId": 3,
+    "solo":2
   }
 ]

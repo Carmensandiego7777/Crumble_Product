@@ -1,0 +1,101 @@
+.centered-div {
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Set a maximum width for larger screens */
+  margin-top: 30px;
+  margin: 30px auto;
+  border: 2px solid #333; /* 2px border with darker color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Add padding for content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  background-color: #f9f9f9; /* Light background color */
+  text-align: center; /* Center align text */
+  font-family: Arial, sans-serif; 
+  color: #333; 
+}
+  
+.centered-div button {
+  padding: 10px 20px; /* Add padding to buttons */
+  background-color: #007bff; /* Blue button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Add border radius to buttons */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.centered-div button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+mat-card{
+  .img{
+    width: 20px ;
+    height: 30px;
+    max-width: fit-content;
+  }
+}
+  
+
+  .counter {
+    display: flex;
+  align-items: center;
+    justify-content: left;
+    gap: .3rem;
+  }
+  
+  .btn {
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff9f00;
+    color: white;
+  }
+  
+  .count {
+    font-size: 18px;
+  }
+  
+  .subtract-btn {
+    border-radius: 50% 0 0 50%;
+  }
+  
+  .add-btn {
+    border-radius: 0 50% 50% 0;
+  }
+  
+
+  .space{
+    width: 30%;
+    justify-content: space-between;
+  }
+
+  $custom-color:#fb641b;
+
+  .design{
+    border-radius: 1rem;
+  }
+
+
+
+  .cart-style{
+    width: 100%;
+    // margin-top: 5px;
+    display: inline-block;
+   
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 12px;
+
+  }
+
+  .Flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+  }
