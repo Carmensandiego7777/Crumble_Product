@@ -1,0 +1,41 @@
+<div>
+  <h1>Login</h1>
+  <a (click)="toggleReg()"
+    >or <span class="create-account">Create an Account</span></a
+  >
+  <div *ngIf="true; else block6">
+    <div class="text-center" *ngIf="!forgot; else block4">
+      <app-input
+        [fieldName]="'Email'"
+        [type]="'text'"
+        (ejectData)="handleEmailChange($event)"
+      >
+      </app-input>
+
+      <app-input
+        [fieldName]="'Password'"
+        [type]="'password'"
+        (ejectData)="handlePasswordChange($event)"
+      >
+      </app-input>
+
+      <a (click)="toggleLoginForgot()"
+        >Have you forgotten password
+        <span class="create-account">Click Here </span></a
+      >
+      <br />
+
+      <button class="button-style" (click)="submitLogin()">Login</button>
+    </div>
+
+    <ng-template #block4>
+      <div>
+        <app-forgot></app-forgot>
+      </div>
+    </ng-template>
+  </div>
+</div>
+
+<ng-template #block6>
+  <p>hello</p>
+</ng-template>

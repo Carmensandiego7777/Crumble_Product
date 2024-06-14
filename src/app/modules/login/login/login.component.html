@@ -1,4 +1,23 @@
 <div>
   <app-navbar />
-  <img src="./../../../../assets/Crumble.jpg" alt="" class="responsive-image" />
+
+  <!-- <img src="./../../../../assets/Crumble.jpg" alt="" class="responsive-image" /> -->
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened style="width: 36%">
+      <div *ngIf="!reg; else block2">
+        <app-login2></app-login2>
+      </div>
+      <ng-template #block2>
+        <app-register></app-register>
+      </ng-template>
+    </mat-drawer>
+    <mat-drawer-content>
+      <img
+        src="./../../../../assets/Crumble.jpg"
+        alt=""
+        class="responsive-image"
+        height="100%"
+      />
+    </mat-drawer-content>
+  </mat-drawer-container>
 </div>

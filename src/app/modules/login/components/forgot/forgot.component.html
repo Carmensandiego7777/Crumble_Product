@@ -1,0 +1,20 @@
+<div *ngIf="!redirect; else block5">
+  <app-input
+    [fieldName]="'Email'"
+    [type]="'text'"
+    (ejectData)="handleEmailChange($event)"
+  >
+  </app-input>
+
+  <button class="button-style" (click)="submitLogin()">Submit</button>
+</div>
+
+<ng-template #block5>
+  <app-input
+    [fieldName]="'Enter Otp'"
+    [type]="'text'"
+    (ejectData)="handleOtpChange($event)"
+  >
+  </app-input>
+  <button class="button-style" (click)="submitLoginOtp()">Submit</button>
+</ng-template>

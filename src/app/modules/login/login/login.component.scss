@@ -12,3 +12,18 @@
     /* Optionally, add max-width to prevent the image from exceeding its original size */
     max-width: 100%; /* Adjust this if needed */
   }
+
+
+  .example-container {
+    width: auto;
+    height: 100%;
+    margin: 0px;
+    border: 1px ;
+    /* The background property is added to clearly distinguish the borders between drawer and main
+       content */
+    background: #eee;
+  }
+
+  mat-drawer-content{
+    background-color: green;
+  }

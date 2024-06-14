@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthInterceptorService } from '../../../../services/auth-interceptor.service';
 
 @Component({
   selector: 'app1-navbar',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
   title: string = 'CRUMBLE';
-  links: string[] = ['offers', 'Home', 'Sign in', 'Cart'];
+  links: string[] = ['offers', 'Home', 'LogOut', 'Cart'];
   imglinks: string[] = [
     '../../../../assets/Logo.png',
     '../../../../assets/nav2/home.png',
@@ -21,7 +22,7 @@ export class NavbarComponent {
 
   isActive = false;
   
-  constructor(private router:Router){}
+  constructor(private router:Router, private auth:AuthInterceptorService){}
 
   onActivate() {
     this.isActive = true;
@@ -33,5 +34,10 @@ export class NavbarComponent {
 
   home(){
     this.router.navigate(['/home']);
+  }
+
+  login(){
+    this.auth.logout();
+      this.router.navigate(['/login'])
   }
 }

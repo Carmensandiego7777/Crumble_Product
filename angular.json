@@ -43,10 +43,8 @@
   "node_modules/mdb-ui-kit/css/mdb.min.css"
             ],
             "scripts": [
-              "node_modules/chart.js/dist/chart.js",
-              "node_modules/@popperjs/core/dist/umd/popper.min.js",
-  "node_modules/bootstrap/dist/js/bootstrap.min.js",
-  "node_modules/mdb-ui-kit/js/mdb.min.js"
+              "node_modules/chart.js/dist/chart.js"
+    
             ]
           },
           "configurations": {
@@ -127,9 +125,8 @@
   "node_modules/mdb-ui-kit/css/mdb.min.css"
             ],
             "scripts": [
-              "node_modules/@popperjs/core/dist/umd/popper.min.js",
-  "node_modules/bootstrap/dist/js/bootstrap.min.js",
-  "node_modules/mdb-ui-kit/js/mdb.min.js"
+              "node_modules/chart.js/dist/chart.js"
+    
             ]
           }
         }

@@ -1,1 +1,41 @@
-<p>register works!</p>
+<h1>Register</h1>
+<a (click)="toggleReg()"
+  >or <span class="create-account">login into your account</span></a
+>
+<div *ngIf="!verify; else block3">
+  <div class="text-center">
+    <app-input
+      [fieldName]="'Name'"
+      [type]="'text'"
+      (ejectData)="handleNameChange($event)"
+    >
+    </app-input>
+
+    <app-input
+      [fieldName]="'Email'"
+      [type]="'email'"
+      (ejectData)="handleEmailChange($event)"
+      [ngClass]="{ 'invalid-email': !isEmailValid }"
+    >
+    </app-input>
+    <app-input
+      [fieldName]="'Password'"
+      [type]="'password'"
+      (ejectData)="handlePasswordChange($event)"
+    >
+    </app-input>
+    <app-input
+      [fieldName]="'Phone Number'"
+      [type]="'text'"
+      (ejectData)="handlePhoneNumberChange($event)"
+    >
+    </app-input>
+
+    <button class="button-style" (click)="submitLogin()">Sign Up</button>
+  </div>
+</div>
+<ng-template #block3>
+  <div>
+    <app-otp></app-otp>
+  </div>
+</ng-template>

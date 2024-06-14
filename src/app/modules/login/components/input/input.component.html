@@ -4,9 +4,10 @@
     <input
       matInput
       placeholder="Enter your {{ fieldName }}"
-      type="text"
+      type="{{ type }}"
       [disabled]="isdisabled"
-      (input)="ejectInput()"
+      (ngModelChange)="onInputChange($event, $event)"
+      (blur)="onBlur()"
       [(ngModel)]="fieldData"
     />
   </mat-form-field>

@@ -1,1 +1,10 @@
-<p>otp works!</p>
+<div class="text-center">
+  <app-input
+    [fieldName]="'One Time Password'"
+    [type]="'text'"
+    (ejectData)="handleOtpChange($event)"
+  >
+  </app-input>
+
+  <button class="button-style" (click)="submitLogin()">Submit</button>
+</div>

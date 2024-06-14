@@ -1,12 +1,8 @@
 import { Injectable } from '@angular/core';
-import {
-  HttpRequest,
-  HttpHandler,
-  HttpEvent,
-  HttpInterceptor,
-} from '@angular/common/http';
+import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/common/http';
 import { Observable, BehaviorSubject, mergeMap } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -19,7 +15,7 @@ export class AuthInterceptorService implements HttpInterceptor {
   private tokenSubject: BehaviorSubject<string>;
   public email: string;
   public access_token: string;
-  constructor() {
+  constructor(private router:Router) {
     this.tokenSubject = new BehaviorSubject<string>(
       localStorage.getItem("access_token") ?? ''
     );
@@ -67,5 +63,15 @@ export class AuthInterceptorService implements HttpInterceptor {
   private isExcludedRoute(url: string): boolean {
     // Check if the request URL matches any of the excluded routes
     return this.excludedRoutes.some(route => url.includes(route));
+  }
+
+
+  logout() {
+    // Clear user data from localStorage or sessionStorage
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('email');
+    this.router.navigate(['/login']);
+    
+    
   }
 }

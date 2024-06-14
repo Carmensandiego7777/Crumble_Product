@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PopUpComponent } from '../pop-up/pop-up.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { AuthInterceptorService } from '../../../../services/auth-interceptor.service';
 
 @Component({
   selector: 'app-links',
@@ -16,15 +17,16 @@ export class LinksComponent {
 
   isActive = false;
   @Output() action = new EventEmitter();
-  constructor(public dialog: MatDialog, private Routed: ActivatedRoute) {}
+  constructor(public dialog: MatDialog, private Routed: ActivatedRoute,private auth:AuthInterceptorService, private router:Router) {}
   ngOnInit() {
     // this.openModal();
     // console.log(this.Routed.url);
   }
 
   openModal() {
-    if (this.txt == 'Sign in') {
-      this.openDialog('0ms', '0ms');
+    if (this.txt == 'LogOut') {
+      this.auth.logout();
+      this.router.navigate(['/login'])
     }
   }
 
